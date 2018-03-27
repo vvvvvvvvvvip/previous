@@ -1,0 +1,48 @@
+$font-path :'/fonts/';
+$num : 12;
+$url : "/images/";
+$large : 1600px;
+$medium : 1068px;
+$small : 745px;
+$f-small : 767px;
+$rules : (
+  large : $large,
+  medium : $medium,
+  small : $small,
+);
+$nav-imgs : (
+ 'apple' : 40px,
+ 'mac' : 51px,
+ 'ipad' : 50px,
+ 'iphone' : 68px,
+ 'watch' : 64px,
+ 'tv' : 40px,
+ 'music' : 60px,
+ 'support' : 77px,
+ 'search' : 40px,
+ 'bag' : 38px,
+);
+$lists : iphone_6s,apple_tv,macbook,accessories;
+
+
+$ban-list: (
+'ipad_pro': 1310px 541px,
+'iphone_pro': 580px 517px,
+'watch_pro': 671px 341px,
+);
+$small-list :(
+'ipad_pro': 440px 182px,
+'iphone_pro': 200px 178px,
+'watch_pro': 263px 134px,
+);
+
+$logo-list : (
+'ipad_logo' : 139px 37px,
+'iphone_logo' : 174px 39px,
+'watch_logo' : 184px 39px,
+);
+$logo-s-list :(
+'ipad_logo' : 108px 29px,
+'iphone_logo' : 138px 31px,
+'watch_logo' : 145px 31px,
+);

@@ -1,0 +1,30 @@
+@import 'var';
+@mixin font-generator($name,$font-name){
+  $font-path : '../fonts/';
+  @font-face{
+    font-family: $name;
+    src:
+    local($font-name),
+    url($font-path + $font-name+'.woff')format('woff'),
+    url($font-path + $font-name+'.eot')format('eot'),
+    url($font-path + $font-name+'.ttf')format('ttf'),
+    url($font-path + $font-name+'.svg')format('svg');
+  }
+}
+@include font-generator('myriad normal','myriad-set-pro_text');
+@include font-generator('myriad bold','myriad-set-pro_semibold');
+@include font-generator('myriad thin','myriad-set-pro_thin');
+@include font-generator('myriad sup-thin','myriad-set-pro_extrathin');
+@include font-generator('icon text','appleicons_text');
+@include font-generator('icon thin','appieicons_thin');
+
+.icon{
+  font-family: 'icon text';
+  padding-left: 10px;
+}
+.icon-right::after{
+  content: "";
+}
+.icon-play::after{
+  content: "";
+}

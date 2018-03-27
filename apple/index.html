@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>apple</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  </head>
+  <body>
+
+    <nav class="gn-nav">
+      <input type="checkbox" id="menu">
+      <div class="gn-content">
+        <ul class="gn-list">
+          <li class="gn-item gn-apple">
+            <a href="" class="gn-link"><span class="texthidden">Apple</span></a></li>
+          <li class="gn-item gn-mac">
+            <a href="" class="gn-link"><span class="texthidden">Mac</span></a>
+          </li>
+          <li class="gn-item gn-ipad">
+            <a href="" class="gn-link"><span class="texthidden">iPad</span></a>
+          </li>
+          <li class="gn-item gn-iphone">
+            <a href="" class="gn-link"><span class="texthidden">iPhone</span></a>
+          </li>
+          <li class="gn-item gn-watch">
+            <a href="" class="gn-link"><span class="texthidden">Watch</span></a>
+          </li>
+          <li class="gn-item gn-tv">
+            <a href="" class="gn-link"><span class="texthidden">TV</span></a>
+          </li>
+          <li class="gn-item gn-music">
+            <a href="" class="gn-link"><span class="texthidden">Music</span></a>
+          </li>
+          <li class="gn-item gn-support">
+            <a href="" class="gn-link"><span class="texthidden">Support</span></a>
+          </li>
+          <li class="gn-item gn-search">
+            <a href="" class="gn-link">
+              <span class="texthidden">Search</span>
+              <span class="search-placeholder">Search apple.com</span>
+            </a>
+          </li>
+          <li class="gn-item gn-bag">
+            <a href="" class="gn-link"><span class="texthidden">Bag</span></a>
+          </li>
+        </ul>
+        <ul class="gn-header">
+          <li class="gn-item gn-menu">
+            <label for="menu">
+              <span class="shang"></span>
+              <span class="xia"></span>
+            </label>
+            <span class="texthidden">open menu</span>
+          </li>
+          <li class="gn-item gn-apple">
+            <a href="" class="gn-link"><span class="texthidden">Apple</span></a>
+          </li>
+          <li class="gn-item gn-bag">
+            <a href="" class="gn-link"><span class="texthidden">Bag</span></a>
+          </li>
+        </ul>
+        <div class="gn-searchview">
+          <form action="" class="search-form">
+            <div class="search-wrapper">
+              <button class="search-sumbit"></button>
+              <input type="text" class="search-input" placeholder="Search apple.com">
+            </div>
+          </form>
+          <section class="search-section">
+            <h3>Quick Links</h3>
+            <ul class="search-list">
+              <li class="search-list"><a href="">Find a Store</a></li>
+              <li class="search-list"><a href="">Accessories</a></li>
+              <li class="search-list"><a href="">iPod</a></li>
+              <li class="search-list"><a href="">iOS</a></li>
+              <li class="search-list"><a href="">Gift Cards</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="banner">
+      <div class="banner-inner">
+        <ul class="banner-slide">
+          <li class="banner-list watch_pro">
+            <a href=""><span class="texthidden">Watch</span></a>
+            <div class="copy-inner">
+              <h2 class="product_pro watch_logo"><a></a></h2>
+              <h3 class="product-text">You. At a glance.</h3>
+              <ul class="links">
+                <li>
+                  <a href="">Learn more<strong class="icon icon-right"></strong></a>
+                </li>
+                <li>
+                  <a href="">Watch the keynote<strong class="icon icon-play"></strong></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="banner-list ipad_pro">
+            <a href=""><span class="texthidden">iPad</span></a>
+            <div class="copy-inner">
+              <h2 class="product_pro ipad_logo"><a></a></h2>
+              <h3 class="product-text">Super. Computer. Now in two sizes.</h3>
+              <ul class="links">
+                <li>
+                  <a href="">Learn more<strong class="icon icon-right"></strong></a>
+                </li>
+                <li>
+                  <a href="">Watch the film<strong class="icon icon-play"></strong></a>
+                </li>
+                <li>
+                  <a href="">Watch the keynote<strong class="icon icon-play"></strong></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="banner-list iphone_pro">
+            <a href=""><span class="texthidden">iPhone</span></a>
+            <div class="copy-inner">
+              <h2 class="product_pro iphone_logo"><a></a></h2>
+              <h3 class="product-text">A big step for small.</h3>
+              <ul class="links">
+                <li>
+                  <a href="">Learn more<strong class="icon icon-right"></strong></a>
+                </li>
+                <li>
+                  <a href="">Watch the keynote<strong class="icon icon-play"></strong></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+       <!--  <nav class="dotnav">
+          <ul>
+            <li class="circle"></li>
+            <li class="circle"></li>
+            <li class="circle"></li>
+          </ul>
+        </nav> -->
+        <button class="arrow arrow-prev"></button>
+        <button class="arrow arrow-next"></button>
+      </div>
+    </div>
+<script src="js/jquery-1.12.0.js"></script>
+<script>
+   var t=setInterval(move,2000);
+   var slide=$('.banner-slide');
+   var width=slide.find('.banner-list:eq(0)').outerWidth();
+   var flag=true;
+   function move(){
+     if(!flag){return;}
+     flag=false;
+    var width=slide.find('.banner-list:eq(0)').outerWidth();
+     slide.animate({left:-width},600,function(){
+       $(this).append($(this).find('.banner-list:eq(0)'))
+       .css('left',0);
+       flag=true;
+     })
+   }
+   function move1(){
+     if(!flag){return;}
+     flag=false;
+     slide.find('.banner-list:last').insertBefore(slide.find('.banner-list:first'));
+     slide.css('left',-width+'px').animate({left:0},600,function(){
+       flag=true;
+     });
+   }
+   $('.banner-inner').on('mouseenter',function(){
+     clearInterval(t);
+   });
+   $('.banner-inner').on('mouseleave',function(){
+    t=setInterval(move,2000);
+   })
+   $('.arrow-next').on('click',move);
+   $('.arrow-prev').on('click',move1);
+</script>
+
+  <ul class="aside">
+    <li class="large-3 medium-6 small-12">
+      <a href=""><span class="texthidden">sdd</span></a>
+    </li>
+    <li class="large-3 medium-6 small-12">
+      <a href=""><span class="texthidden">ds</span></a>
+    </li>
+    <li class="large-3 medium-6 small-12">
+      <a href=""><span class="texthidden">ff</span></a>
+    </li>
+    <li class="large-3 medium-6 small-12">
+      <a href=""><span class="texthidden">dd</span></a>
+    </li>
+  </ul>
+  <div class="redcross-wrapper">
+    <div class="redcross-banner">
+      <span class="redcross-logo"></span>
+      <span class="redcross-copy">
+        Canada Wildfires Relief
+        <a href="" class="redcross-help">Donate to help &gt;</a>
+      </span>
+    </div>
+    <div class="exchange">
+      <a href="" class="more">AC Wall Plug Adapter Recall Program &gt;</a>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="with-5-col nav">
+        <div class="col">
+          <input type="checkbox" id="a">
+          <div class="section">
+            <label for="a"><h3 class="title">Shop and Learn</h3></label>
+            <ul class="list">
+              <li class="items"><a href="">Mac</a></li>
+              <li class="items"><a href="">iPad</a></li>
+              <li class="items"><a href="">iPhone</a></li>
+              <li class="items"><a href="">Watch</a></li>
+              <li class="items"><a href="">TV</a></li>
+              <li class="items"><a href="">Music</a></li>
+              <li class="items"><a href="">iTunes</a></li>
+              <li class="items"><a href="">iPod</a></li>
+              <li class="items"><a href="">Accessories</a></li>
+              <li class="items"><a href="">Gift Cards</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <input type="checkbox" id="b">
+          <div class="section">
+            <label for="b"><h3 class="title">Apple Store</h3></label>
+            <ul class="list">
+              <li class="items"><a href="">Find a Store</a></li>
+              <li class="items"><a href="">Genius Bar</a></li>
+              <li class="items"><a href="">Workshops and Learning</a></li>
+              <li class="items"><a href="">Youth Programs</a></li>
+              <li class="items"><a href="">Apple Store App</a></li>
+              <li class="items"><a href="">Refurbished</a></li>
+              <li class="items"><a href="">Financing</a></li>
+              <li class="items"><a href="">Reuse and Recycling</a></li>
+              <li class="items"><a href="">Order Status</a></li>
+              <li class="items"><a href="">Order Status</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <input type="checkbox" id="c">
+          <div class="section">
+            <label for="c"><h3 class="title">For Education</h3></label>
+            <ul class="list">
+              <li class="items"><a href="">Apple and Education</a></li>
+              <li class="items"><a href="">Shop for College</a></li>
+            </ul>
+          </div>
+          <input type="checkbox" id="d">
+          <div class="section">
+            <label for="d"><h3 class="title">For Business</h3></label>
+            <ul class="list">
+              <li class="items"><a href="">Apple and Business</a></li>
+              <li class="items"><a href="">Shop for Business</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="section">
+            <input type="checkbox" id="e">
+            <label for="e"><h3 class="title">Account</h3></label>
+            <ul class="list">
+              <li class="items"><a href="">Manage Your Apple ID</a></li>
+              <li class="items"><a href="">Apple Store Account</a></li>
+              <li class="items"><a href="">iCloud.com</a></li>
+            </ul>
+          </div>
+          <div class="section">
+            <input type="checkbox" id="f">
+            <label for="f"><h3 class="title">Apple Values</h3></label>
+            <ul class="list">
+              <li class="items"><a href="">Environment</a></li>
+              <li class="items"><a href="">Supplier Responsibility</a></li>
+              <li class="items"><a href="">Accessibility</a></li>
+              <li class="items"><a href="">Privacy</a></li>
+              <li class="items"><a href="">Inclusion and Diversity</a></li>
+              <li class="items"><a href="">Education</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <input type="checkbox" id="g">
+          <div class="section">
+            <label for="g"><h3 class="title">About Apple</h3></label>
+            <ul class="list">
+              <li class="items"><a href="">Apple Info</a></li>
+              <li class="items"><a href="">Job Opportunities</a></li>
+              <li class="items"><a href="">Press Info</a></li>
+              <li class="items"><a href="">Investors</a></li>
+              <li class="items"><a href="">Events</a></li>
+              <li class="items"><a href="">Hot News</a></li>
+              <li class="items"><a href="">Contact Apple</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="gf-footer">
+        <div class="gf-footer-shop">
+           More ways to shop: Visit an
+           <a href=""> Apple Store</a>
+            call 1-800-MY-APPLE, or
+            <a href=""> find a reseller</a>
+            .
+        </div>
+        <div class="gf-footer-locale">
+          <a href="" class="locale-link">
+            <span class="locale-flag"></span>
+            United States
+          </a>
+        </div>
+        <div class="gf-footer-legal">
+          <div class="legal-copyright">Copyright © 2016 Apple Inc. All rights reserved.</div>
+          <div class="legal-links">
+            <a href="" class="legal-link">Privacy Policy</a>
+            <a href="" class="legal-link">Terms of Use</a>
+            <a href="" class="legal-link">Sales and Refunds</a>
+            <a href="" class="legal-link">Legal</a>
+            <a href="" class="legal-link">Site Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="./js/jquery-1.12.0.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="./js/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

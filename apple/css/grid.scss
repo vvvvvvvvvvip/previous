@@ -1,0 +1,38 @@
+@import 'var';
+%column{
+  float: left;
+  position: relative;
+}
+
+@each $rule in map_keys($rules){
+  @for $i from 1 through $num{
+    .#{$rule}-#{$i}{
+      @extend %column;
+    }
+  }
+}
+
+@each $rule in map_keys($rules){
+  @for $i from 1 through $num{
+    @media screen and(max-width: map_get($rules,$rule)){
+      .#{$rule}-#{$i}{
+        width : percentage($i/$num);
+      }
+    }
+  }
+}
+
+
+
+
+@for $i from 5 through 10{
+  .with-#{$i}-col .col{
+      @extend %column;
+      width: percentage(1/$i);
+    }
+  @media screen and(max-width: $f-small){
+    .with-#{$i}-col .col{
+      width: 100%;
+    }
+  }
+}

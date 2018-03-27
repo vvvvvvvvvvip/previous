@@ -1,0 +1,827 @@
+@import 'var';
+@import 'font';
+@import 'reset';
+@import 'grid';
+$url : "../images/";
+%clear{
+  content: '';
+  display: block;
+  clear: both;
+}
+%hiddentext{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+@mixin position($top,$right,$bottom,$left){
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+.texthidden{
+  @extend %hiddentext;
+}
+@mixin onsmall{
+  @media screen and(max-width: $small){
+    @content;
+  }
+}
+//头部
+@each $nav-img in map_keys($nav-imgs){
+  $img-width : map_get($nav-imgs,$nav-img);
+  .gn-#{$nav-img} a{
+    width: $img-width;
+    background: url($url + $nav-img + '.svg')center center no-repeat;
+  }
+}
+.gn-nav{
+  width: 100%;
+  height: 44px;
+  position: relative;
+  @include onsmall{
+    height: 48px;
+  }
+}
+.gn-nav .gn-content{
+  width: 100%;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.95);
+  @include position(0,null,null,0);
+  z-index: 5;
+  @include onsmall{
+    height: 48px;
+    overflow: hidden;
+    transition: height .8s ease;
+  }
+}
+.gn-item a{
+  display: inline-block;
+  height: 44px;
+  opacity: 1;
+  transition:opacity ease 0.3s;
+  @include onsmall{
+    background-size: 80px 55px;
+    height: 47px;
+  }
+  &:hover{
+    opacity: 0.7;
+    text-decoration: none;
+  }
+}
+.gn-list{
+  max-width: 980px;
+  height: 44px;
+  margin: 0 auto;
+  text-align: justify;
+  @include onsmall{
+    width: 100%;
+    height: auto;
+    padding: 0 48px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    @include position(48px,null,null,0);
+    z-index: 8;
+    li:nth-child(1),li:nth-child(10){
+      display: none;
+    }
+  }
+  &::after{
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+  .gn-item{
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    @include onsmall{
+      display: block;
+      width: 100%;
+      height: 47px;
+      border-bottom: 1px solid #333;
+      line-height: 47px;
+      transform: scale(1.2,1.2) translateY(-10px);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+  }
+  .gn-search {
+    @include onsmall{
+      border-bottom-color: #fff;
+    }
+  }
+  .gn-search .search-placeholder{
+    display: none;
+    @include onsmall{
+      margin-left: 38px;
+      width: 300px;
+      height: 47px;
+      font-size: 22px;
+      color: #fff;
+      cursor: text;
+    }
+  }
+}
+@include onsmall{
+  @for $i from 2 through 9{
+    .gn-list li:nth-child(#{$i}){
+      transition: transform .6s ease $i*0.08s,opacity .3s ease $i*0.08s;
+    }
+  }
+}
+.gn-header{
+  display: none;
+  width: 100%;
+  height: 48px;
+  position: relative;
+  z-index: 2;
+  @include onsmall{
+    display: block;
+  }
+  &::after{
+    @extend %clear;
+  }
+  .gn-item{
+    float: left;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    .gn-link{
+      width: 100%;
+      height: 100%;
+      background-size: 48px 48px;
+    }
+  }
+  .gn-menu{
+    @include position(0,null,null,0);
+    padding: 10px 15px;
+    box-sizing: border-box;
+    transition: transform .5s ease;
+    transform-origin: 50%;
+    label{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .shang,.xia{
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      display: block;
+      transition: transform .5s ease .1s;
+      transform-origin: 23%;
+    }
+    .shang{
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+  }
+  .gn-apple{
+    margin: auto;
+    @include position(0,0,null,0);
+  }
+  .gn-bag{
+    @include position(0,0,null,null);
+    transition: transform .3s ease .6s;
+  }
+}
+.gn-searchview{
+  height: 44px;
+  width: 51%;
+  margin: auto;
+  display: none;
+  @include position(0,0,null,0);
+  z-index: 10;
+  background: rgba(0,0,0,0.95);
+  @include onsmall{
+    height: 48px;
+  }
+}
+.gn-searchview form{
+  height: 44px;
+  line-height: 44px;
+  @include onsmall{
+    height: 48px;
+  }
+  .search-sumbit{
+    @include position(0,null,null,0);
+    z-index: 1;
+    width: 40px;
+    height: 44px;
+    cursor: pointer;
+    background-size: 20px 44px;
+    background: url("../images/search.svg") no-repeat;
+    background-position: 10px 50%;
+    background-repeat: no-repeat;
+  }
+  .search-input{
+    font-size: 16px;
+    color: #fff;
+    width: 95%;
+    margin-left: 5%;
+  }
+}
+.gn-searchview .search-section{
+  display: block;
+  font-size: 15px;
+  line-height: 2;
+  background: #fff;
+  font-family: 'myriad normal';
+  color: #999;
+  padding: 24px 40px 15px 40px;
+  h3{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+}
+.gn-searchview .search-section ul{
+  padding-top: 5px;
+  li a{
+    color: #999;
+    display: block;
+    padding: 0 10px;
+  }
+}
+#menu{
+  display: none;
+}
+@include onsmall{
+  #menu:checked + .gn-content{
+    height: 800px;
+    .gn-header .gn-menu{
+      transform: rotate(90deg);
+    }
+    .gn-header .shang{
+      transform: rotate(45deg);
+    }
+    .gn-header .xia{
+      transform: rotate(-45deg);
+    }
+    .gn-list .gn-search .search-placeholder{
+      display: block;
+    }
+    .gn-list li{
+      opacity: 1;
+      transform: scale(1,1) translateY(-10px);
+    }
+    .gn-header .gn-bag{
+      transform: translateX(35px);
+    }
+  }
+}
+
+//banner
+.banner{
+  width: 100%;
+  max-height: 606px;
+  cursor: pointer;
+  @media screen and(max-width: $small){
+    min-height: 343px;
+  }
+}
+.banner-inner{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 606px;
+  @media screen and(max-width: $small){
+    height: 343px;
+  }
+}
+.banner-slide{
+  width: 400%;
+  @include position(0,null,null,-100%);
+  &:after{
+    @extend %clear;
+  }
+}
+.banner-list{
+  width:25%;
+  display: block;
+  float: left;
+  height: 606px;
+  position: relative;
+  overflow: hidden;
+  @media screen and(max-width: $small){
+    height: 343px;
+  }
+}
+.banner-list >a{
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+//文字公共部分
+.copy-inner{
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  h2,h3{
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: "myriad sup-thin";
+    font-size: 34px;
+    color: #666;
+    @media screen and(max-width: $small){
+      font-size: 20px;
+    }
+  }
+  h2 a{
+    display: inline-block;;
+    height: 39px;
+    @media screen and(max-width: $small){
+      height: 31px;
+    }
+  }
+  ul{
+    text-align: center;
+  }
+  .links li{
+    margin: 0 8px 8px 5px;
+    display: inline-block;
+  }
+  .links li a{
+    font-family: "myriad thin";
+    font-size: 24px;
+    color: #08c;
+    &:hover{
+      text-decoration: none;
+      color: #111;
+    }
+    @media screen and(max-width: $small){
+      font-size: 20px;
+    }
+  }
+}
+
+.watch_pro >a{
+  height: 341px;
+  @include position(null,0,60px,0);
+  @media screen and(max-width: $small){
+    height: 134px;
+  }
+}
+.watch_pro .copy-inner{
+  @include position(60px,0,null,0);
+  vertical-align: middle;
+  height: auto;
+  z-index: 1;
+  @media screen and(max-width: $small){
+    top: 20px;
+  }
+  h2{
+    margin: 0 auto 5px;
+    @media screen and(max-width: $small){
+      margin-bottom: 16px;
+    }
+  }
+  h2 a{
+    width: 184px;
+    @media screen and(max-width: $small){
+      width: 145px;
+    }
+  }
+  h3{
+    margin: 0 auto 13px;
+  }
+}
+
+.ipad_pro >a{
+  height: 541px;
+  @include position(null,0,-150px,0);
+  @media screen and(max-width: $small){
+    height: 182px;
+    @include position(null,0,-20px,0);
+  }
+}
+.ipad_pro .copy-inner{
+  @include position(null,0,400px,0);
+  vertical-align: middle;
+  z-index: 1;
+  @media screen and(max-width: $small){
+    bottom: 170px;
+  }
+  h2{
+    margin: 0 auto 5px;
+    @media screen and(max-width: $small){
+      margin-bottom: 16px;
+    }
+  }
+  h2 a{
+    width: 139px;
+    @media screen and(max-width: $small){
+      width: 145px;
+    }
+  }
+  h3{
+    margin: 0 auto 13px;
+  }
+}
+.iphone_pro >a{
+  height: 517px;
+  @include position(52px,17%,null,null);
+  @media screen and(max-width: $small){
+    width: 200px;
+    height: 178px;
+    @include position(60px,52%,null,null);
+    @media screen and(max-width: 512px){
+      @include position(10px,0,null,0);
+    }
+  }
+}
+
+
+.iphone_pro .copy-inner{
+  @include position(180px,25%,null,null);
+  vertical-align: middle;
+  height: auto;
+  z-index: 1;
+  @media screen and(max-width: $medium){
+    right: 5%;
+  }
+  @media screen and(max-width: $small){
+    right: 20%;
+    top: 70px;
+    @media screen and(max-width: 512px){
+      @include position(165px,25%,null,null);
+    }
+  }
+  h2{
+    @media screen and(max-width: $small){
+      margin-bottom: 16px;
+    }
+  }
+  .links li{
+    width: 100%;
+    display: block;
+  }
+  h2 a{
+    width: 184px;
+    @media screen and(max-width: $small){
+      width: 145px;
+    }
+  }
+}
+
+
+@mixin picture($list1,$list2,$pic){
+  @each $ban-name in map_keys($list1){
+      .#{$ban-name} >a{
+        background : url($url + $ban-name + '_large' + $pic) center center no-repeat;
+        background-size: map_get($list1,$ban-name);
+        @media screen and(max-width: $small){
+          background: url($url + $ban-name +'_small' + $pic)center center no-repeat;
+          background-size: map_get($list2,$ban-name);
+        }
+      }
+  }
+}
+@include picture($ban-list,$small-list,'.jpg');
+@include picture($logo-list,$logo-s-list,'.png');
+
+
+.banner-inner .dotnav{
+  width: 100%;
+  height: 26px;
+  @include position(null,null,2%,0);
+  z-index: 3;
+  text-align: center;
+  ul{
+    display: inline-block;
+  }
+  ul:after{
+    @extend %clear;
+  }
+  .circle{
+    width: 8px;
+    height: 8px;
+    float: left;
+    margin: 0 10px;
+    background: #999;
+    border-radius: 50%;
+  }
+  .circle:nth-child(1){
+    background: none;
+    border: 1px solid #08c;
+  }
+  .blue{
+    background: none;
+    border: 1px solid #08c;
+  }
+}
+.banner-inner .arrow{
+  font-family: 'myriad thin';
+  width: 67px;
+  height: 128px;
+  position: absolute;
+  text-align: center;
+  color: #666;
+  display: block;
+  font-size: 72px;
+  opacity: 0;
+  transition: 250ms opacity linear, 250ms color linear, 250ms background-color linear;
+  line-height: 128px;
+  top: 35%;
+  cursor: pointer;
+  &:hover{
+    opacity: 1;
+  }
+}
+.banner-inner:hover button{
+  opacity: 0.5;
+}
+.banner-inner .arrow-prev{
+  left: 18px;
+  &:after{
+    content: "〈";
+  }
+}
+.banner-inner .arrow-next{
+  right: 18px;
+  &:after{
+    content: "〉";
+  }
+}
+
+//图片
+.aside{
+  &::before{
+    @extend %clear;
+  }
+  &::after{
+    @extend %clear;
+  }
+  margin: 0 auto;
+}
+.aside li{
+  float: left;
+  box-sizing: border-box;
+}
+.aside li a{
+  display: block;
+  height: 200px;
+  background-position: center center;
+  background-size: 360px 200px;
+  background-repeat: no-repeat;
+}
+@for $i from 1 to 5{
+  .aside li:nth-child(#{$i}) a{
+    background-image : url($url + nth($lists, $i)+'_large.jpg');
+    @media screen and(max-width: $medium){
+      background-image: url($url + nth($lists, $i)+'_medium.jpg');
+      background-size: 640px 200px;
+    }
+    @media screen and(max-width: $small){
+      background-image: url($url + nth($lists, $i)+'_small.jpg');
+      background-size: 736px 200px;
+    }
+  }
+}
+//边线处理
+.aside{
+  li{
+    border-right: 2px solid #fff;
+    border-bottom: none;
+  }
+  li:nth-child(4){
+    border-right: none;
+  }
+  @media screen and(max-width: $medium){
+    li:nth-child(2n){
+      border-right: none;
+    }
+    li:nth-child(1),li:nth-child(2){
+      border-bottom: 2px solid #fff;
+    }
+  }
+  @media screen and(max-width: $small){
+    li{
+      border-right: none;
+      border-bottom: 2px solid #fff;
+    }
+    li:nth-child(4){
+      border-bottom: none;
+    }
+  }
+}
+
+
+
+
+.redcross-wrapper{
+  text-align: center;
+  font-family: "myriad normal";
+  a{
+    color: #08c;
+    padding-left: 7px;
+  }
+  .redcross-banner{
+    display: inline-block;
+    padding: 20px 0;
+    border-bottom: 1px solid #d6d6d6;
+  }
+}
+.redcross-banner span{
+  float: left;
+  line-height: 50px;
+  display: inline-block;
+  @media screen and(max-width: $small){
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    a{
+      display: block;
+    }
+  }
+}
+.redcross-logo{
+  height: 44px;
+  width: 179px;
+  margin-top: 5px;
+  background: url($url+'redcross_banner_large.jpg')center center no-repeat;
+}
+.redcross-copy{
+  color: #333;
+  margin-left: 20px;
+  border-left: 1px solid #d6d6d6;
+  padding-left: 22px;
+  @media screen and(max-width: $small){
+    border-left: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.exchange{
+    padding: 20px 0;
+    text-align: center;
+}
+
+//脚部
+.footer{
+  padding: 0 22px;
+  background-color: #f2f2f2;
+  font-family: "myriad normal";
+  font-size: 12px;
+}
+.footer-inner{
+  max-width: 980px;
+  margin: 0 auto;
+}
+.footer .nav{
+  padding-top: 32px;
+  &::before{
+    @extend %clear;
+  }
+  &::after{
+    @extend %clear;
+  }
+  input{
+    display: none;
+  }
+}
+.footer .title{
+  font-family: "myriad bold";
+  font-weight: 600;
+  color: #333;
+  @media screen and(max-width: $f-small){
+    line-height: 38px;
+    margin-bottom: 0;
+    &:hover{
+      color: #000;
+    }
+    &::after{
+      content: '＋';
+      float: right;
+      transition: .5s ease;
+    }
+  }
+}
+.section{
+  margin-bottom: 20px;
+}
+@media screen and(max-width: $f-small){
+  .footer .section{
+    margin-bottom: 0;
+    border-bottom: 1px solid #e3e3e3;
+  }
+}
+.footer .list{
+  margin-right: 20px;
+  @media screen and(max-width: $f-small){
+    display: none;
+    li{
+      padding: 5px 0;
+    }
+  }
+  .items{
+    overflow: hidden;
+    height: 20px;
+    line-height: 20px;
+  }
+  .items a{
+    color: #666;
+  }
+}
+@media screen and(max-width: $f-small){
+  $ids:a,b,c,d,e,f,g;
+  @each $id-name in $ids{
+    ##{$id-name}{
+      display: none;
+      &:checked + .section .list{
+        display: block;
+        margin-top: 5px;
+        padding-left: 10px;
+      }
+      &:checked + .section h3:after{
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+//底部信息
+.gf-footer{
+   color: #999;
+   padding: 20px 0 24px;
+   letter-spacing: 0.2px;
+   @media screen and(max-width: $f-small){
+     padding: 20px 0;
+   }
+   a{
+     color: #666;
+   }
+}
+.gf-footer .gf-footer-shop{
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 6px;
+  padding-bottom: 5px;
+  @media screen and(max-width: $f-small){
+    border-bottom: none;
+  }
+  a{
+    color: #08c;
+  }
+  a:hover{
+    color: #222;
+  }
+}
+.gf-footer .gf-footer-locale{
+  float: right;
+  white-space: nowrap;
+  line-height: 16px;
+  @media screen and(max-width: $f-small){
+    float: none;
+  }
+  .locale-flag{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url($url+'16.png') left center no-repeat;
+    background-size: 16px 16px;
+    cursor: pointer;
+    float: left;
+    padding-right: 5px;
+  }
+}
+.gf-footer .gf-footer-legal{
+  &:after{
+    @extend %clear;
+  }
+  @media screen and(max-width: $f-small){
+    padding-top: 15px;
+  }
+  .legal-copyright{
+    margin-top: 5px;
+    margin-right: 26px;
+    float: left;
+    @media screen and(max-width: $f-small){
+      float: none;
+      margin-right: 0;
+    }
+  }
+  .legal-links{
+    margin-top: 5px;
+    margin-right: 26px;
+    float: left;
+    @media screen and(max-width: $f-small){
+      float: none;
+      margin-right: 0;
+    }
+    .legal-link{
+      border-right: 1px solid #d6d6d6;
+      margin-right: 10px;
+      padding-right: 12px;
+      white-space: nowrap;
+    }
+    a:nth-child(5){
+      border-right: none;
+    }
+  }
+}

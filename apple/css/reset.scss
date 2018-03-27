@@ -1,0 +1,29 @@
+%reset{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body{
+  @extend %reset;
+  font-size: 18px;
+  font-family: 'myriad sup-thin';
+  // font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+ul,li,h1,h2,h3,h4,h5,h6,a,span,div,p{
+  @extend %reset;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+button{
+  background: none;
+  border: none;
+  outline: none;
+}
+input{
+  outline: none;
+  border: none;
+  background: none;
+}
