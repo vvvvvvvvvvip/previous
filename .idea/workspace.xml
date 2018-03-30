@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cadf405e-6761-43f2-a52a-5677e1b39647" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yintai\animate.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yintai\function.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yintai\jiedianlunbo.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yintai\js\inner.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yintai\shh.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yintai\yintai.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yintai/index.html" afterPath="$PROJECT_DIR$/yintai/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yintai/js/yintai.js" afterPath="$PROJECT_DIR$/yintai/js/yintai.js" />
+      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yidong\animate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yidong\function.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yidong\yidong.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yidong/index.html" afterPath="$PROJECT_DIR$/yidong/index.html" />
     </list>
     <ignored path="previous.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,10 +27,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/yintai/index.html">
+        <entry file="file://$PROJECT_DIR$/yidong/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34170854">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.3265306">
+              <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -57,6 +53,7 @@
       <list>
         <option value="$PROJECT_DIR$/yintai/jiandianlunbo.js" />
         <option value="$PROJECT_DIR$/yintai/index.html" />
+        <option value="$PROJECT_DIR$/yidong/index.html" />
       </list>
     </option>
   </component>
@@ -113,10 +110,6 @@
               <option name="myItemId" value="previous" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yintai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -128,21 +121,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="yintai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="previous" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="previous" />
+              <option name="myItemId" value="yidong" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,9 +184,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -237,8 +216,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/yintai/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34170854">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        <state vertical-scroll-proportion="-4.927536">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yidong/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3265306">
+          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
           <folding />
         </state>
       </provider>
