@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cadf405e-6761-43f2-a52a-5677e1b39647" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yidong\animate.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yidong\function.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\cy183\Desktop\previous\yidong\yidong.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yidong/index.html" afterPath="$PROJECT_DIR$/yidong/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jingdong/index.html" afterPath="$PROJECT_DIR$/jingdong/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jingdong/js/jd.js" afterPath="$PROJECT_DIR$/jingdong/js/jd.js" />
     </list>
     <ignored path="previous.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/yidong/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jingdong/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3265306">
-              <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+            <state vertical-scroll-proportion="-7.4375">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jd.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jingdong/js/jd.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20531401">
+              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -54,6 +62,8 @@
         <option value="$PROJECT_DIR$/yintai/jiandianlunbo.js" />
         <option value="$PROJECT_DIR$/yintai/index.html" />
         <option value="$PROJECT_DIR$/yidong/index.html" />
+        <option value="$PROJECT_DIR$/jingdong/index.html" />
+        <option value="$PROJECT_DIR$/jingdong/js/jd.js" />
       </list>
     </option>
   </component>
@@ -121,7 +131,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="yidong" />
+              <option name="myItemId" value="jingdong" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -226,6 +236,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3265306">
           <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jingdong/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.4375">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jingdong/js/jd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20531401">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding />
         </state>
       </provider>

@@ -4,7 +4,6 @@ $(function(){
 	var imgs=$(".banner_img");	
 	var circle=$(".banner_six_circle");
 	var left=$(".left_kuai")[0];
-    console.log(left)
 	var right=$(".right_kuai")[0];
     var n=0;
     var next=0;
@@ -722,11 +721,9 @@ for(var i=0;i<qu2.length;i++){
 
        // 五楼选项卡开始
       var qu5=$(".qu5");
-      console.log(qu5.length)
       var f5=$(".floor5_right");
       var ff55=$(".ff55")[0];
       var nulll_5=$(".nulll_5",ff55);
-      console.log(nulll_5.length)
       for(var i=0;i<qu5.length;i++){
     qu5[i].index=i;             //添加标识 
     qu5[i].onmouseover=function(){        //将当前的值设为1
